@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Store</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="./product.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"defer></script>
+
+</head>
+
+<body>
+  <nav class="bg-black text-white  p-4 flex justify-between items-center shadow-md px-[50px]">
+    <div class="text-3xl font-bold bg-transparent">AHS</div>
+    <div id="cart"><a href="./cart.html"><i class="fa-solid fa-cart-shopping "></i></a></div>
+  </nav>
+
+  <div id="hero" class="relative w-full h-[500px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-[url('https://images.pexels.com/photos/2433985/pexels-photo-2433985.jpeg')] bg-no-repeat bg-center bg-contain md:bg-cover">
+    </div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 bg-black/40">
+      <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">Find Your Dream Car Today!</h1>
+      <p class="text-lg md:text-xl mt-4 drop-shadow-md">Luxury, Performance, & Affordability – All in One Place.</p>
+
+      <div id="filtered"
+        class="bg-white flex items-center text-black w-full max-w-[812px] h-[60px] mx-auto rounded-lg shadow-md overflow-hidden mt-4">
+        <input type="number" placeholder="Min price" class="w-full px-4 py-2 border-r border-gray-300  outline-none" id="min">
+        <input type="number" placeholder="Max price"
+          class="w-full px-4 py-2 border-x border-gray-300 focus:outline-none " id="max">
+        <button
+          id="FilterBtn"
+          class="w-full h-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 text-lg transition duration-300 flex items-center justify-center cursor-pointer">
+          Filter
+          <i class="fa-solid fa-magnifying-glass ml-2 text-[16px]"></i>
+
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <!-- Products Section -->
+    <section id="products">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Luxury Cars</h2>
+      <div id="product-row" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Products will be dynamically added here -->
+      </div>
+    </section>
+
+
+  </div>
+
+
+  <footer class="bg-[#303030] text-white ">
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+      <div class="flex mb-10 justify-between">
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Cars for sale</h3>
+          <p>Audi Cars for Sale</p>
+          <p>Volkswagen Cars for Sale</p>
+          <p>Porsche Cars for Sale</p>
+          <p>Ferrari Cars for Sale</p>
+          <p>Lamborghini Cars for Sale</p>
+          <p>Land Rover Cars for Sale</p>
+          <p>Jaguar Cars for Sale</p>
+          <p>Volvo Cars for Sale</p>
+        </span>
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Explore PakWheels</h3>
+          <p>Used Cars</p>
+          <p>Used Bikes</p>
+          <p>New Cars</p>
+          <p>Auto Parts & Accessories</p>
+          <p>Cool Rides</p>
+          <p>Forums</p>
+          <p>Autoshow</p>
+          <p>Sitemap</p>
+        </span>
+
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">PakWheels.com</h3>
+          <p>About PakWheels.com</p>
+          <p>Our Products</p>
+          <p>Advertise With Us</p>
+          <p>How To Pay</p>
+          <p>FAQs</p>
+          <p>Refunds & Returns</p>
+          <p>Careers</p>
+          <p>Contact Us</p>
+        </span>
+
+      </div>
+
+
+      <div class="flex mb-6 justify-between">
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Cars by Category</h3>
+          <p>Luxury Imported Cars</p>
+          <p>European Cars</p>
+          <p>American Cars</p>
+          <p>German Cars</p>
+          <p>Italian Cars</p>
+          <p>British Cars</p>
+          <p>Hybrid Imported Cars</p>
+          <p>Electric Imported Cars</p>
+        </span>
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Cars by Color</h3>
+          <p> Cars</p>
+          <p>Silver Cars</p>
+          <p>Black Cars</p>
+          <p>Grey Cars</p>
+          <p>Blue Cars</p>
+          <p>Red Cars</p>
+          <p>Green Cars</p>
+          <p>Gold Cars</p>
+        </span>
+
+        <span>
+          <span>
+            <h1 class="font-bold text-2xl mb-2">Follow us on</h1>
+            <i class="fa-brands fa-x-twitter p-3 rounded-full bg-[#f5f3f511]"></i>
+            <i class="fa-brands fa-facebook p-3 rounded-full bg-[#f5f3f511]"></i>
+            <i class="fa-brands fa-instagram p-3 rounded-full bg-[#f5f3f511]"></i>
+            <i class="fa-brands fa-whatsapp p-3 rounded-full bg-[#f5f3f511]"></i>
+          </span>
+
+          <div class="mt-6">
+            <p class="font-bold text-2xl mb-2">Download Mobile Apps</p>
+            <img class="w-36" src="https://wsa2.pakwheels.com/assets/google-play-badge-fe1c02f5d509b88ec786cc1893f68200.svg" alt="">
+            <img class="w-36" src="https://wsa4.pakwheels.com/assets/app-store-badge-47a3fa71b3442ad5181388d9060d4478.svg" alt="">
+            <img class="w-36" src="https://wsa3.pakwheels.com/assets/huawei-store-badge-d13aaefcccf041b3e65b9d762e971c98.svg" alt="">
+          </div>
+        </span>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
