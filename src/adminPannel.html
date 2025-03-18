@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Store</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./product.js"defer></script>
+</head>
+<body class="bg-[url('https://images.pexels.com/photos/30842342/pexels-photo-30842342/free-photo-of-dynamic-supercars-with-alpine-backdrop.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-cover bg-center bg-fixed text-gray-50 overflow-hidden">
+    <nav id="cart-nav" class="flex justify-between bg-black text-white px-[50px] text-2xl py-3"></div>
+        <div id="cart-name" class="">
+            <h1 class="font-bold ">AHS</h1>
+        </div>
+    </nav>
+
+
+    <div id="adminPannel" class="w-[300px] h-screen bg-gray-500 p-4 fixed opacity-95">
+        <div id="name" class=" items-center font-bold  ">
+            <i class="fa-solid fa-user-tie text-6xl font-black mb-4"></i>
+            <p class="text-3xl ">Admin Dashboard</p>
+        </div>
+
+        <div id="createCart">
+            <p class="mt-28 text-2xl font-medium  hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer bg-gray-700 flex items-center justify-center" id="showModalButton">Add a new product</p>
+            <p><a href="./productDetail.html" class="mt-12 text-2xl font-medium hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer bg-gray-700 flex items-center justify-center">View all products</a></p>
+        </div>
+    </div>
+
+    <div id="form" class="text-black flex justify-center items-center min-h-screen ml-[300px] hidden">
+        <div id="inputFields" class="flex flex-col items-center space-y-6 bg-gray-800 p-10 rounded-xl shadow-lg opacity-95">
+            <p class="text-2xl font-bold text-white ">Create a new product</p>
+            <input type="url" placeholder="Place the img URL" class="text-white bg-gray-500 px-4 text-2xl outline-none rounded-2xl w-[500px] h-[50px]" id="imgURL">
+            <input type="text" placeholder="Product name" class="text-white bg-gray-500 px-4 text-2xl outline-none rounded-2xl w-[500px] h-[50px]" id="pName">
+            <input type="number" placeholder="Product price" id="pPrice" class="text-white bg-gray-500 px-4 text-2xl outline-none rounded-2xl w-[500px] h-[50px]">
+            <button class="bg-amber-50 hover:bg-amber-100 cursor-pointer rounded-xl text-xl px-4 font-black" id="productFormSubmitButton">Submit</button>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

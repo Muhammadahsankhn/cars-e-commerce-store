@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Store</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="./product.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"defer></script>
+
+</head>
+
+<body>
+  <nav class="bg-black text-white  p-4 flex justify-between items-center shadow-md px-[50px]">
+    <div class="text-3xl font-bold bg-transparent">AHS</div>
+    <div class="flex items-center justify-center">
+      <div id="cart"><a href="./cart.html"><i class="fa-solid fa-cart-shopping "></i></a></div>
+      <button class="w-full h-full bg-red-600 hover:bg-red-700 text-white text-2xl  transition duration-300  cursor-pointer px-2.5 ml-4 rounded-md">Logout</button>
+  
+    </div>
+  </nav>
+
+  <div id="hero" class="relative w-full h-[500px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-[url('https://images.pexels.com/photos/2433985/pexels-photo-2433985.jpeg')] bg-no-repeat bg-center bg-contain md:bg-cover">
+    </div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 bg-black/40">
+      <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">Find Your Dream Car Today!</h1>
+      <p class="text-lg md:text-xl mt-4 drop-shadow-md">Luxury, Performance, & Affordability – All in One Place.</p>
+
+      <div id="filtered"
+        class="bg-white flex items-center text-black w-full max-w-[812px] h-[60px] mx-auto rounded-lg shadow-md overflow-hidden mt-4">
+        <input type="number" placeholder="Min price" class="w-full px-4 py-2 border-r border-gray-300  outline-none" id="min">
+        <input type="number" placeholder="Max price"
+          class="w-full px-4 py-2 border-x border-gray-300 focus:outline-none " id="max">
+        <button
+          id="FilterBtn"
+          class="w-full h-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 text-lg transition duration-300 flex items-center justify-center cursor-pointer">
+          Filter
+          <i class="fa-solid fa-magnifying-glass ml-2 text-[16px]"></i>
+
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <!-- Products Section -->
+    <section id="products">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Luxury Cars</h2>
+      <div id="product-row" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Products will be dynamically added here -->
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+  <footer class="bg-[#303030] text-white ">
+
+    <div class="max-w-7xl mx-auto px-6 py-10 ">
+      <div class="mb-10 justify-between sm:flex">
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Cars for sale</h3>
+          <p class="hover:underline">Audi Cars for Sale</p>
+          <p class="hover:underline">Volkswagen Cars for Sale</p>
+          <p class="hover:underline">Porsche Cars for Sale</p>
+          <p class="hover:underline">Ferrari Cars for Sale</p>
+          <p class="hover:underline">Lamborghini Cars for Sale</p>
+          <p class="hover:underline">Land Rover Cars for Sale</p>
+          <p class="hover:underline">Jaguar Cars for Sale</p>
+          <p class="hover:underline">Volvo Cars for Sale</p>
+        </span>
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Explore AHS</h3>
+          <p class="hover:underline">Used Cars</p>
+          <p class="hover:underline">Used Bikes</p>
+          <p class="hover:underline">New Cars</p>
+          <p class="hover:underline">Auto Parts & Accessories</p>
+          <p class="hover:underline">Cool Rides</p>
+          <p class="hover:underline">Forums</p>
+          <p class="hover:underline">Autoshow</p>
+          <p class="hover:underline">Sitemap</p>
+        </span>
+
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">AHS.com</h3>
+          <p class="hover:underline">About AHS.com</p>
+          <p class="hover:underline">Our Products</p>
+          <p class="hover:underline">Advertise With Us</p>
+          <p class="hover:underline">How To Pay</p>
+          <p class="hover:underline">FAQs</p>
+          <p class="hover:underline">Refunds & Returns</p>
+          <p class="hover:underline">Careers</p>
+          <p class="hover:underline">Contact Us</p>
+        </span>
+
+      </div>
+
+
+      <div class="flex mb-6 justify-between">
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Cars by Category</h3>
+          <p class="hover:underline">Luxury Imported Cars</p>
+          <p class="hover:underline">European Cars</p>
+          <p class="hover:underline">American Cars</p>
+          <p class="hover:underline">German Cars</p>
+          <p class="hover:underline">Italian Cars</p>
+          <p class="hover:underline">British Cars</p>
+          <p class="hover:underline">Hybrid Imported Cars</p>
+          <p class="hover:underline">Electric Imported Cars</p>
+        </span>
+
+        <span>
+          <h3 class="font-bold text-2xl mb-2">Cars by Color</h3>
+          <p class="hover:underline"> Cars</p>
+          <p class="hover:underline">Silver Cars</p>
+          <p class="hover:underline">Black Cars</p>
+          <p class="hover:underline">Grey Cars</p>
+          <p class="hover:underline">Blue Cars</p>
+          <p class="hover:underline">Red Cars</p>
+          <p class="hover:underline">Green Cars</p>
+          <p class="hover:underline">Gold Cars</p>
+        </span>
+
+        <span>
+          <span>
+            <h1 class="font-bold text-2xl mb-2">Follow us on</h1>
+            <i class="fa-brands fa-x-twitter p-3 rounded-full bg-[#f5f3f511]"></i>
+            <i class="fa-brands fa-facebook p-3 rounded-full bg-[#f5f3f511]"></i>
+            <i class="fa-brands fa-instagram p-3 rounded-full bg-[#f5f3f511]"></i>
+            <i class="fa-brands fa-whatsapp p-3 rounded-full bg-[#f5f3f511]"></i>
+          </span>
+
+          <div class="mt-6">
+            <p class="font-bold text-2xl mb-2">Download Mobile Apps</p>
+            <img class="w-36" src="https://wsa2.pakwheels.com/assets/google-play-badge-fe1c02f5d509b88ec786cc1893f68200.svg" alt="">
+            <img class="w-36" src="https://wsa4.pakwheels.com/assets/app-store-badge-47a3fa71b3442ad5181388d9060d4478.svg" alt="">
+            <img class="w-36" src="https://wsa3.pakwheels.com/assets/huawei-store-badge-d13aaefcccf041b3e65b9d762e971c98.svg" alt="">
+          </div>
+        </span>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

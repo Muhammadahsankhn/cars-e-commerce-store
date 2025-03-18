@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Store</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script type="module" src="app.js" defer></script>
+    <script type="module" src="firebaseAuth.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body
+    class="m-0 p-0 box-border font-sans bg-[url('https://images.pexels.com/photos/712618/pexels-photo-712618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-cover bg-center bg-fixed text-[#fff] mx-[50px]">
+
+    <!-- Navbar -->
+    <nav class="bg-transparent  p-4 flex justify-between items-center">
+        <div class="text-3xl font-bold ">AHS</div>
+    </nav>
+
+
+
+
+    <!-- User Signup Form -->
+    <div id="signupform" class="w-[32rem] mx-auto my-12 p-6 rounded-lg shadow-lg text-center text-[#7b5e5e]">
+        <h2 class="text-4xl font-bold mb-4 text-[#fff]">Sign Up</h2>
+        <div id="signupMessage" class="bg-red-800 text-white p-2 rounded-lg opacity-0 hidden"></div>
+
+        <div class="flex justify-center items-center mb-6">
+            <div class="relative text-left mr-12 w-full">
+                <i class="fa-solid fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                <input type="text" placeholder="Firstname" id="fname"
+                    class="p-2  rounded-2xl px-10 bg-white w-full outline-none">
+            </div>
+
+            <div class="relative text-left w-full ">
+                <i class="fa-solid fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                <input type="text" placeholder="Lastname" id="lname"
+                    class="p-2  rounded-2xl px-10 bg-white w-full outline-none">
+            </div>
+
+        </div>
+
+        <div class="relative text-left w-full mt-2 mb-6">
+            <i class="fa-solid fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 "></i>
+            <input type="email" placeholder="Email or phone number" id="email"
+                class="w-full p-2  rounded-2xl px-10 bg-white outline-none">
+        </div>
+
+        <div class="relative text-left w-full my-6">
+            <i class="fa-solid fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+            <input type="password" placeholder="Password" id="password"
+                class="w-full p-2  rounded-2xl pl-10 pr-4 bg-white text-black focus:outline-none ">
+        </div>
+
+        <button id="signupbtn"
+            class="w-full bg-[#008080] text-white p-2 mb-6 rounded-md hover:bg-[#009089] transition cursor-pointer">Register</button>
+
+        <p class="text-xl text-white">Have an account? <a href="#" id="showLogin" class="underline font-bold">Login</a>
+        </p>
+
+    </div>
+
+
+
+    <!-- User Login Form -->
+    <div id="loginform" class="w-[32rem] mx-auto my-12 p-6  rounded-lg shadow-lg text-center hidden">
+        <h2 class="text-4xl font-bold mb-4 text-[#fff]">Login</h2>
+        <div id="signInMessage" class="bg-red-800 text-white p-2 rounded-lg opacity-0 hidden"></div>
+
+        <div class="relative text-left w-full mt-2 mb-6">
+            <i class="fa-solid fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 "></i>
+            <input type="email" placeholder="Email or phone number" id="lemail"
+                class="w-full p-2  rounded-2xl px-10 bg-white outline-none text-black">
+        </div>
+
+        <div class="relative text-left w-full mt-6">
+            <i class="fa-solid fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+            <input type="password" placeholder="Password" id="lpassword"
+                class="w-full p-2  rounded-2xl pl-10 pr-4 bg-white text-black focus:outline-none">
+        </div>
+
+        <button id="logBtn"
+            class="w-full bg-[#008080] text-white p-2 my-6  rounded-md hover:bg-[#009089] transition cursor-pointer">Login</button>
+
+        <p class="text-xl">Don't have an account? <a href="#" id="showSignup" class="underline font-bold">Sign Up</a>
+        </p>
+
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
