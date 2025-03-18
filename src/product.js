@@ -1,4 +1,5 @@
-import { doc, setDoc } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+import { db } from "./firebaseAuth.js";
+import { collection,addDoc } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
 
 const products = [
     {
@@ -364,17 +365,21 @@ document.getElementById('showModalButton').addEventListener('click', () => {
 })
 
 const addNewProduct = async () => {
-    const imageURL = document.getElementById('imgURL').value;
-    const name = document.getElementById('pName').value;
+    try {
+        const imageURL = document.getElementById('imgURL').value;
+        const name = document.getElementById('pName').value;
 
-    console.log("here")
+        const colRef = collection(db, "products");
+        await addDoc(colRef, {imageURL, name});
 
-    const docRef = doc(db, "products",);
-    await setDoc(docRef, { imageURL, name, price, productId: Date.now() });
-    Swal.fire("Product Added!");
+
+        Swal.fire("Product Added!");
+    } catch (error) {
+        console.log('Error in adding product in to the DB', error)
+    }
 }
 
-document.getElementById('productFormSubmitButton').addEventListener('click',async () => {
+document.getElementById('productFormSubmitButton').addEventListener('click', async () => {
     await addNewProduct()
 });
 
