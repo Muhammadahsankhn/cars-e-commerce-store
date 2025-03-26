@@ -7,7 +7,8 @@
   <title>E-Store</title>
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <script src="./product.js" defer></script>
+  <script type="module" src="./product.js" ></script>
+  <script type="module" src="./firebaseAuth.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"defer></script>
 
 </head>
@@ -17,7 +18,7 @@
     <div class="text-3xl font-bold bg-transparent">AHS</div>
     <div class="flex items-center justify-center">
       <div id="cart"><a href="./cart.html"><i class="fa-solid fa-cart-shopping "></i></a></div>
-      <button class="w-full h-full bg-red-600 hover:bg-red-700 text-white text-2xl  transition duration-300  cursor-pointer px-2.5 ml-4 rounded-md">Logout</button>
+      <button id="logout" class="w-full h-full bg-red-600 hover:bg-red-700 text-white text-2xl  transition duration-300  cursor-pointer px-2.5 ml-4 rounded-md logout-btn">Logout</button>
   
     </div>
   </nav>

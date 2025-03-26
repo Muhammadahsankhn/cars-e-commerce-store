@@ -7,7 +7,9 @@
     <title>E-Store</title>
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="./product.js" defer></script>
+    <script type="module" src="firebaseAuth.js"defer></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js"defer></script>
+    <script type="module" src="./favourite.js"defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
 </head>
@@ -22,8 +24,10 @@
         </div>
     </nav>
 
-    <div class="FavItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-0 gap-y-6 mx-0 px-0 rounded-2xl">
+    <h1 class="text-center text-3xl font-bold my-6">Your Favorite Cars</h1>
+    
+    <div class="FavItems flex flex-wrap justify-center"></div>
 
-    </div>
+
 </body>
 </html>
