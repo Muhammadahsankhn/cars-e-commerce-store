@@ -43,21 +43,21 @@ async function fetchCartItems() {
 
             cartItemContainer.innerHTML += `
                 <div class="cart-entry" id="cart-item-${docSnap.id}">
-                    <div class="item mx-36 h-auto shadow-2xl my-2 flex">
-                        <img class="w-[300px] h-[200px]" src="${item.imgSrc}" alt="${item.naam}" />
-                        <div class="mx-[30px]">
-                            <h1 class="font-bold text-3xl ">${item.naam}</h1>
-                            <p class="text-[14px] w-[800px] leading-4 my-1.5">${randomDetail}</p>
-                            <h1 class="font-medium text-xl text-red-500">$ ${item.price}</h1>
+                    <div class="item mx-4 sm:mx-6 md:mx-10 lg:mx-36 h-auto shadow-2xl my-2 flex">
+                        <img class="w-[150px] h-[150px] md:w-[250px] md:h-[200px] lg:w-[300px] lg:h-[250px]" src="${item.imgSrc}" alt="${item.naam}" />
+                        <div class=" sm:mx-3 md:mx-5 lg:mx-[30px]">
+                            <h1 class="sm:font-semibold md:font-semibold lg:font-bold sm:text-xl md:text-2xl lg:text-3xl ">${item.naam}</h1>
+                            <p class="text-[10px] md:text-[12px] lg:text-[14px] max-w-[800px] sm:max-w-auto md:max-w-[200px] lg:max-w-[800px] leading-3 lg:leading-4 sm:my-0.5 md:my-1 lg:my-1.5">${randomDetail}</p>
+                            <h1 class="sm:font-semibold md:font-semibold lg:font-medium sm:text-[12px] md:text-[16px]  text-red-500">$ ${item.price}</h1>
                             <span class="flex justify-between">
-                                <span class="flex items-center">
-                                    <button onclick="changeCount('${docSnap.id}', 'plus')" class="bg-red-600 hover:bg-red-700 rounded-full text-white font-bold px-2 cursor-pointer">+</button>
+                                <span class="flex items-center ">
+                                    <button onclick="changeCount('${docSnap.id}', 'plus')" class="bg-red-600 hover:bg-red-700 rounded-full text-white sm:font-semibold md:font-semibold lg:font-bold px-1 sm:px-1 md:px-1.5 lg:px-2 cursor-pointer">+</button>
                                     <p class="mx-2 border-[0.1px] border-gray-400 p-1" id="quantity-${docSnap.id}">${item.numberOfUnit}</p>
-                                    <button onclick="changeCount('${docSnap.id}', 'minus')" class="bg-red-600 hover:bg-red-700 rounded-full text-white font-bold px-2 cursor-pointer">-</button>
+                                    <button onclick="changeCount('${docSnap.id}', 'minus')" class="bg-red-600 hover:bg-red-700 rounded-full text-white sm:font-semibold md:font-semibold lg:font-bold px-1 sm:px-1 md:px-1.5 lg:px-2 cursor-pointer">-</button>
                                 </span>
                                 <span>
-                                    <button onclick="deleteItem('${docSnap.id}')" class="w-36 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg cursor-pointer">Delete</button>
-                                    <button onclick="addFavItemFromCart('${docSnap.id}', '${item.imgSrc}')" class="w-38 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg cursor-pointer">Add to favorite</button>
+                                    <button onclick="deleteItem('${docSnap.id}')" class="w-12  md:w-18 lg:w-36 bg-red-600 hover:bg-red-700 text-white font-bold text-[10px] md:text-sm lg:text-base py-1 md:py-2 lg:py-3 rounded-lg cursor-pointer m-1">Delete</button>
+                                    <button onclick="addFavItemFromCart('${docSnap.id}', '${item.imgSrc}')" class="w-28 md:w-36 lg:w-56 bg-red-600 hover:bg-red-700 text-white font-bold text-[10px] md:text-[14px] lg:text-[16px] py-1 md:py-2 lg:py-3 px-4 rounded-lg cursor-pointer">Add to Favorite</button>
                                 </span>
                             </span>
                         </div>
@@ -114,7 +114,7 @@ function calculateTotal(cartItems) {
     const totalContainer = document.getElementById('total');
     if (totalContainer) {
         totalContainer.innerHTML = `
-            <span class="flex justify-between items-center text-3xl font-bold gap-6 ">
+            <span class="flex justify-between items-center text-xl md:text-2xl lg:text-3xl font-bold gap-4 lg:gap-6 ">
                 <div>Total :</div>
                 <div class="">$${totalAmount.toFixed(2)}</div>
             </span>

@@ -11,28 +11,32 @@
     <script type="module" src="./favourite.js" defer></script>
 </head>
 <body>
-
-    <nav id="cart-nav" class="flex justify-between bg-black text-white px-[50px] text-2xl py-3"></div>
-        <div id="cart-name" class="">
-            <h1 class="font-bold ">Cart Items</h1>
+    <nav id="cart-nav" class="flex items-center justify-between bg-black text-white px-[50px] md:px-12 lg:px-20 text-sm md:text-2xl py-3">
+        <!-- Cart Title -->
+        <div id="cart-name" class="font-bold">
+            <h1>Cart Items</h1>
         </div>
-        <div id="back-to-shopping">
-            <a href="./favourite.html">
-                <i class="fa-solid fa-heart text-white"></i></a>
-        </div>
-
-        <div id="PP">
-            <a href="./product.html">Back to shopping</a>
+    
+        <!-- Icons & Links -->
+        <div class="flex justify-between  items-center md:gap-6 lg:gap-8 gap-4">
+            <!-- Favorite Page -->
+            <a href="./favourite.html" class="text-white">
+                <i class="fa-solid fa-heart text-white text-2xl"></i>
+            </a>
+    
+            <!-- Back to Shopping -->
+            <a href="./product.html" class="text-white hover:underline">Back to Shopping</a>
         </div>
     </nav>
+    
 
     <!-- All carts are display here!! -->
     <div class="cartItem container mx-auto mt-10"></div>
 
-    <div id="total" class="mx-36 border border-gray-300 rounded">Total : $0.00</div>
+    <div id="total" class="mx-4 sm:mx-6 md:mx-10 lg:mx-36 border border-gray-300 rounded">Total : $0.00</div>
 
     <div class="flex justify-center">
-        <button id="checkout" class="flex justify-center items-center  border px-4 py-2 mx-36 w-full max-w-[400px] mt-4 rounded-2xl bg-red-500 text-white font-bold text-3xl hover:bg-red-700 cursor-pointer" >Check out</button>
+        <button id="checkout" class="flex justify-center items-center  border px-4 py-2 mx-4 sm:mx-6 md:mx-10 lg:mx-36 w-full  mt-4 rounded-2xl bg-red-500 text-white font-bold text-3xl hover:bg-red-700 cursor-pointer" >Check out</button>
     </div>
 </body>
 </html>
